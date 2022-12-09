@@ -28,7 +28,7 @@ jobs:
         $x64param = if ('${{ matrix.architecture }}' -eq 'x64') { $true } else { $false }
         $arm64param = if ('${{ matrix.architecture }}' -eq 'arm64') { $true } else { $false }
         $vs2008param = if ('${{ matrix.compiler }}' -eq 'vs2008') { $true } else { $false }
-        .\build.ps1 -x64:$x64param -arm64:$arm64param -vs2008:$vs2008param
+        pwsh .\build.ps1 -x64:$x64param -arm64:$arm64param -vs2008:$vs2008param
     - name: debug
       shell: cmd
       run: |
