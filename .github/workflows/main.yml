@@ -35,11 +35,11 @@ jobs:
       run: |
         set PATH=C:\Miniconda3;C:\Miniconda3\Scripts;%PATH%
         python -m pip install mugicli
-        pyfind > debug-${{ matrix.architecture }}-{{ matrix.compiler }}.txt
+        pyfind > debug-${{ matrix.architecture }}-${{ matrix.compiler }}.txt
     - name: upload
       uses: actions/upload-artifact@v3
       with:
         name: debug
-        path: debug-${{ matrix.architecture }}-{{ matrix.compiler }}.txt
+        path: debug-${{ matrix.architecture }}-${{ matrix.compiler }}.txt
 
         
