@@ -20,9 +20,7 @@ jobs:
         cd libiconv
         git apply ..\libiconv.patch
         cd ..
-    - name: install pscx
-      shell: pwsh
-      run: install-module pscx -scope CurrentUser -AllowClobber
+    
     - name: build
       shell: pwsh
       run: |
