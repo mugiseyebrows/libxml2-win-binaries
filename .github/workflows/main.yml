@@ -45,5 +45,6 @@ jobs:
       uses: ncipollo/release-action@v1
       if: startsWith(github.ref, 'refs/tags/')
       with:
+        allowUpdates: true
         artifacts: dist/*.zip
         token: ${{ secrets.GITHUB_TOKEN }}
